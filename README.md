@@ -8,4 +8,4 @@ Please note that this is a work in progres....
 
 This Will probably change alot:/
 
-(https://github.com/shemaKaita/shema.io/Shema.io--Draft.png)
+(https://github.com/shemaKaita/shema.io/blob/master/Shema.io--Draft.png)
