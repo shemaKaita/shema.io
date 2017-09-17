@@ -2,6 +2,7 @@ var gulp = require('gulp');
 var webpack = require('webpack-stream');
 var browserSync = require("browser-sync").create();
 var webpack_config = require('./webpack.config.js');
+var settings = require('./settings.json');
 
 gulp.task('webpack', function(){
 	return gulp.src('public/assets/js/index.js')
@@ -12,7 +13,7 @@ gulp.task('webpack', function(){
 
 gulp.task('serve', function(){
 	browserSync.init({
-        proxy: "localhost/shema.io/public/"
+        proxy: `${settings.proxy.url}`,
     });
 	
 	gulp.watch('public/assets/js/index.js', ['webpack']);
