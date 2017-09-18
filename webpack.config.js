@@ -4,7 +4,7 @@
  module.exports = {
      entry: {
         app : './public/assets/js/app/index.js',
-        vendor : ['jquery'],
+        vendor : ['jquery', 'lodash'],
      },
      output: {
          path: path.resolve(__dirname, 'public/dist/js/'),
@@ -13,7 +13,7 @@
      module: {
          loaders: [
              {
-                 test: '\/app/\.js$/',
+                 test: '\/.js$/',
                  loader: 'babel-loader',
                  query: {
                      presets: ['es2015']

@@ -5,7 +5,7 @@ var webpack_config = require('./webpack.config.js');
 var settings = require('./settings.json');
 
 gulp.task('webpack', function(){
-	return gulp.src('').pipe(webpack(webpack_config))
+	return webpack(webpack_config)
 			.pipe(gulp.dest('public/dist/js'))
 			.pipe(browserSync.stream());
 });

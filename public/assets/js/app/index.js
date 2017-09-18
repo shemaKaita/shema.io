@@ -1,4 +1,5 @@
 import jQuery from 'jquery';
+import lodash from 'lodash';
 
 class Shema{
 	constructor(message){
@@ -9,8 +10,8 @@ class Shema{
 	}
 }
 
-const greeting = new Shema("Shema");
+const greeting = new Shema("Me");
 
 jQuery(document).ready(($) => {
-	greeting.greet();
+	greeting.greet(); 
 });
