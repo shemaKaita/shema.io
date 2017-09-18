@@ -9,7 +9,7 @@ class Shema{
 	}
 }
 
-const greeting = new Shema("World!!");
+const greeting = new Shema("Shema");
 
 jQuery(document).ready(($) => {
 	greeting.greet();
