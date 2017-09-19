@@ -4,7 +4,7 @@
  module.exports = {
      entry: {
         app : './public/assets/js/app/index.js',
-        vendor : ['jquery', 'lodash'],
+        vendor : ['jquery', 'uikit'],
      },
      output: {
          path: path.resolve(__dirname, 'public/dist/js/'),

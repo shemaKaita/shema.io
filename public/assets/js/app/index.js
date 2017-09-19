@@ -1,5 +1,6 @@
 import jQuery from 'jquery';
-import lodash from 'lodash';
+import uikit from 'uikit';
+
 
 class Shema{
 	constructor(message){
@@ -14,5 +15,6 @@ const greeting = new Shema("Universe!!");
 
 jQuery(document).ready(($) => {
 	const message = greeting.greet();
-	$('h1').text(message); 
+	$('h1').text(message);
+	console.log(uikit); 
 });

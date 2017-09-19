@@ -12,9 +12,9 @@ var _jquery = __webpack_require__(0);
 
 var _jquery2 = _interopRequireDefault(_jquery);
 
-var _lodash = __webpack_require__(1);
+var _uikit = __webpack_require__(1);
 
-var _lodash2 = _interopRequireDefault(_lodash);
+var _uikit2 = _interopRequireDefault(_uikit);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -42,6 +42,7 @@ var greeting = new Shema("Universe!!");
 (0, _jquery2.default)(document).ready(function ($) {
 	var message = greeting.greet();
 	$('h1').text(message);
+	console.log(_uikit2.default);
 });
 
 /***/ })
