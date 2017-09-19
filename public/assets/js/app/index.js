@@ -1,5 +1,5 @@
 import jQuery from 'jquery';
-import uikit from 'uikit';
+
 
 
 class Shema{
