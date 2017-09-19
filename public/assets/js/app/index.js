@@ -6,12 +6,13 @@ class Shema{
 		this.msg = message;
 	}
 	greet(){
-		console.log(`Hello ${this.msg}`);
+		return (`Hello ${this.msg}`);
 	}
 }
 
-const greeting = new Shema("Me");
+const greeting = new Shema("Universe!!");
 
 jQuery(document).ready(($) => {
-	greeting.greet(); 
+	const message = greeting.greet();
+	$('h1').text(message); 
 });

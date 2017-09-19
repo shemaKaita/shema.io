@@ -30,17 +30,18 @@ var Shema = function () {
 	_createClass(Shema, [{
 		key: 'greet',
 		value: function greet() {
-			console.log('Hello ' + this.msg);
+			return 'Hello ' + this.msg;
 		}
 	}]);
 
 	return Shema;
 }();
 
-var greeting = new Shema("Me");
+var greeting = new Shema("Universe!!");
 
 (0, _jquery2.default)(document).ready(function ($) {
-	greeting.greet();
+	var message = greeting.greet();
+	$('h1').text(message);
 });
 
 /***/ })

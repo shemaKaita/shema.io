@@ -28,6 +28,12 @@
         new webpack.optimize.CommonsChunkPlugin({
             name : 'vendor',
             filename : 'vendors.bundle.js',
+        }),
+        new webpack.optimize.UglifyJsPlugin({
+            test : /\.js$/,
+            include : [
+                'vendor'
+            ]
         })
      ],
      stats: {
