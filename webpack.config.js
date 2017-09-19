@@ -12,8 +12,11 @@
      },
      module: {
          loaders: [
-             {
-                 test: '\/.js$/',
+             {  
+                 test : /\.js$/,
+                 include : [
+                    path.resolve(__dirname, 'public/assets/js/app/'),
+                 ],  
                  loader: 'babel-loader',
                  query: {
                      presets: ['es2015']
