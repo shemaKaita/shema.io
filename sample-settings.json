@@ -1,0 +1,7 @@
+// Settings for gulp. Remember to remove "sample-" from the filename!
+
+{
+	"proxy" : {
+		"url" : "[YOUR LOCAL URL]"
+	}
+}
