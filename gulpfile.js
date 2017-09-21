@@ -15,7 +15,7 @@ gulp.task('serve', ['webpack'], function(){
         proxy: `${settings.proxy.url}`,
     });
 	
-	gulp.watch('public/assets/js/app/index.js', ['webpack']);
+	gulp.watch('public/assets/js/app/**/*.js', ['webpack']);
 	gulp.watch('public/dist/js/app.bundle.js').on('change', browserSync.reload);
 });
 gulp.task('default', ['serve']);
