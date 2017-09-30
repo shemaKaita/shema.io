@@ -1,0 +1,9 @@
+.listing-card{
+	@extend %section--width-20, %section--left;
+	text-align: center;
+	&__wrapper{
+		@extend %wrapper, %wrapper--padding-15, %wrapper--margin-25;
+		background: purple;
+		color: #fff;
+	}
+}

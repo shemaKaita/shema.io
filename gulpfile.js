@@ -1,15 +1,15 @@
-var gulp = require('gulp');
-var gulpSass = require('gulp-sass');
-var gulpConcat = require ('gulp-concat');
-var gulpCleanCss = require('gulp-clean-css');
-var webpack = require('webpack-stream');
-var browserSync = require("browser-sync").create();
-var webpack_config = require('./webpack.config.js');
-var settings = require('./settings.json');
-var assets = 'public/assets/';
-var dist = 'public/dist/';
-var server_src = 'src/';
-var server_templates = 'templates/';
+const gulp = require('gulp');
+const gulpSass = require('gulp-sass');
+const gulpConcat = require ('gulp-concat');
+const gulpCleanCss = require('gulp-clean-css');
+const webpack = require('webpack-stream');
+const browserSync = require("browser-sync").create();
+const webpack_config = require('./webpack.config.js');
+const settings = require('./settings.json');
+const assets = 'public/assets/';
+const dist = 'public/dist/';
+const server_src = 'src/';
+const server_templates = 'templates/';
 
 gulp.task('webpack', function(){
 	return webpack(webpack_config)

@@ -1,92 +1,32 @@
 /*===================================
 =            BASE STYLES            =
 ===================================*/
+h1, h2, h3, h4, h5, h6, p, a, span {
+  line-height: normal;
+  word-break: break-word; }
+
 /*=====  End of BASE STYLES  ======*/
 /*=====================================
 =            LAYOUT STYLES            =
 =====================================*/
-.section--flush-padding {
-  padding: 0; }
+[class^='section--'] {
+  box-sizing: border-box; }
+  .listing-card {
+    max-width: 20%;
+    width: 100%; }
+  .listing-card {
+    float: left; }
 
-.section--flush-margin {
-  margin: 0; }
+.listing-card__wrapper {
+  padding: 15px; }
 
-.section--width-10 {
-  width: 10%; }
+.listing-card__wrapper {
+  margin: 25px; }
 
-.section--width-20 {
-  width: 20%; }
-
-.section--width-30 {
-  width: 30%; }
-
-.section--width-40 {
-  width: 40%; }
-
-.section--width-50 {
-  width: 50%; }
-
-.section--width-60 {
-  width: 60%; }
-
-.section--width-70 {
-  width: 70%; }
-
-.section--width-80 {
-  width: 80%; }
-
-.section--width-90 {
-  width: 90%; }
-
-.section--width-100 {
-  width: 100%; }
-
-.section--left {
-  float: left; }
-
-.section--right {
-  float: right; }
-
-.section:before, .section:after {
+[class^='wrapper--']:before, .listing-card__wrapper:before, [class^='wrapper--']:after, .listing-card__wrapper:after {
   content: '';
   display: block;
   clear: both; }
-
-.wrapper--flush-padding {
-  padding: 0; }
-
-.wrapper--flush-margin {
-  margin: 0; }
-
-.wrapper--padding-5 {
-  padding: 5px; }
-
-.wrapper--margin-5 {
-  margin: 5px; }
-
-.wrapper--padding-10 {
-  padding: 10px; }
-
-.wrapper--margin-10 {
-  margin: 10px; }
-
-.wrapper--padding-15 {
-  padding: 15px; }
-
-.wrapper--margin-15 {
-  margin: 15px; }
-
-.wrapper--padding-20 {
-  padding: 20px; }
-
-.wrapper--margin-20 {
-  margin: 20px; }
-
-.wrapper--padding-25 {
-  padding: 25px; }
-
-.wrapper--margin-25 {
-  margin: 25px; }
 
 .content--inline {
   display: inline-block; }
@@ -98,6 +38,12 @@
 /*=====================================
 =            MODULE STYLES            =
 =====================================*/
+.listing-card {
+  text-align: center; }
+  .listing-card__wrapper {
+    background: purple;
+    color: #fff; }
+
 /*=====  End of MODULE STYLES  ======*/
 /*====================================
 =            STATE STYLES            =

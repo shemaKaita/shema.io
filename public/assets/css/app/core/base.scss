@@ -7,7 +7,8 @@ div,section, form{
 }
 
 h1,h2,h3,h4,h5,h6,p,a,span{
-
+	line-height: normal;
+	word-break: break-word;
 }
 
 button{
@@ -19,7 +20,7 @@ ul,ol{
 }
 
 li{
-	
+
 }
 
 img{
