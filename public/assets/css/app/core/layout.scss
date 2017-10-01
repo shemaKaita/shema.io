@@ -1,16 +1,9 @@
-%section{
+.section{
 	box-sizing: border-box;
-	&--flush-padding{
-		padding: 0;
-	}
-	&--flush-margin{
-		margin: 0;
-
-	}
-	@for $i from 1 through 10{
-		&--width-#{$i * 10} {
-
-			max-width: $i * 10%;
+	float: left;
+	@for $i from 1 through 12{
+		&--width-#{$i} {
+			max-width: 100% / $i;
 			width: 100%;
 		}
 	}
@@ -23,15 +16,9 @@
 
 }
 [class^='section--']{
-	@extend %section;
+	@extend .section;
 }
-%wrapper{
-	&--flush-padding{
-		padding: 0;
-	}
-	&--flush-margin{
-		margin: 0;
-	}
+.wrapper{
 	@for $i from 1 through 5{
 		&--padding-#{$i * 5} {
 			padding: $i * 5px;
@@ -47,7 +34,7 @@
 	}
 }
 [class^='wrapper--']{
-	@extend %wrapper;
+	@extend .wrapper;
 }
 .content{
 	&--inline{
@@ -66,7 +53,18 @@
 }
 
 .block{
-
+	padding: 0;
+	margin: 0;
+	&--fixed{
+		width: 1200px;
+	}
+	&--fixed-center{
+		width: 1200px;
+		margin: auto;
+	}
+	&--full{
+		width: 100%;
+	}
 }
 
 

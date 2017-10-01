@@ -20,6 +20,7 @@ gulp.task('webpack', function(){
 gulp.task('sass:core', function(){
 	return gulp.src(`${assets}css/app/core/core.scss`)
 			.pipe(gulpSass())
+			.pipe(gulpCleanCss())
 			.pipe(gulp.dest('public/dist/css/'))
 			.pipe(browserSync.stream())
 });

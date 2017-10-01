@@ -1,9 +1,15 @@
+.jumbo{
+	@extend .block, .block--full;
+}
+
 .listing-card{
-	@extend %section--width-20, %section--left;
+	@extend .section--width-5, .section--left;
 	text-align: center;
-	&__wrapper{
-		@extend %wrapper, %wrapper--padding-15, %wrapper--margin-25;
-		background: purple;
+	&__inner{
+		@extend .wrapper, .wrapper--padding-15, .wrapper--margin-10;
+		background: #2eec71;
+		border-radius: 4px;
+		box-shadow: 4px 7px 31px 5px rgba(45, 239, 113, 0.6);
 		color: #fff;
 	}
 }
