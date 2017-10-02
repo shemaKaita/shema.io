@@ -1,23 +1,27 @@
-.section{
+%section{
 	box-sizing: border-box;
 	float: left;
+}
+.section{
+	@extend %section;
 	@for $i from 1 through 12{
 		&--width-#{$i} {
+			@extend %section;
 			max-width: 100% / $i;
 			width: 100%;
 		}
 	}
 	&--left{
+		@extend %section;
 		float: left;
 	}
 	&--right{
+		@extend %section;
 		float: right;
 	}
 
 }
-[class^='section--']{
-	@extend .section;
-}
+
 .wrapper{
 	@for $i from 1 through 5{
 		&--padding-#{$i * 5} {
@@ -52,17 +56,24 @@
 
 }
 
-.block{
+%block{
 	padding: 0;
 	margin: 0;
-	&--fixed{
-		width: 1200px;
+}
+
+.block{
+	@extend %block;
+	&--fixed, &--fixed-center{
+		@extend %block;
+		max-width: 1200px;
+		width: 100%;
 	}
 	&--fixed-center{
-		width: 1200px;
+		@extend %block;
 		margin: auto;
 	}
 	&--full{
+		@extend %block;
 		width: 100%;
 	}
 }

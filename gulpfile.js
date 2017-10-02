@@ -40,8 +40,9 @@ gulp.task('serve', ['webpack'], function(){
         proxy: `${settings.proxy.url}`,
     });
 	
-	gulp.watch(`${assets}js/app/**/*.js`, ['webpack']);
+	gulp.watch(`${assets}js/**/*.js`, ['webpack']);
 	gulp.watch(`${dist}js/app.bundle.js`).on('change', browserSync.reload);
+	gulp.watch(`${dist}js/vendors.bundle.js`).on('change', browserSync.reload);
 });
 gulp.task('default', [ 'serve', 'sass:watch', 'server:watch']);
 
