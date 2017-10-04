@@ -1,92 +1,13 @@
-%section{
-	box-sizing: border-box;
-	float: left;
-}
-.section{
-	@extend %section;
-	@for $i from 1 through 12{
-		&--width-#{$i} {
-			@extend %section;
-			max-width: 100% / $i;
-			width: 100%;
-		}
-	}
-	&--left{
-		@extend %section;
-		float: left;
-	}
-	&--right{
-		@extend %section;
-		float: right;
-	}
+@import './layout/_wrapper.scss';
 
-}
+@import './layout/_section.scss';
 
-.wrapper{
-	@for $i from 1 through 5{
-		&--padding-#{$i * 5} {
-			padding: $i * 5px;
-		}
-		&--margin-#{$i * 5} {
-			margin: $i * 5px;
-		}
-	}
-	&:before, &:after{
-		content: '';
-		display: block;
-		clear: both;
-	}
-}
-[class^='wrapper--']{
-	@extend .wrapper;
-}
-.content{
-	&--inline{
-		display: inline-block;
-	}
-	&--stacked{
-		display: block;
-	}
-}
-.nav{
+@import './layout/_block.scss';
 
-}
+@import './layout/_nav.scss';
 
-.brand{
+@import './layout/_brand.scss';
 
-}
+@import './layout/_sidebar.scss';
 
-%block{
-	padding: 0;
-	margin: 0;
-}
-
-.block{
-	@extend %block;
-	&--fixed, &--fixed-center{
-		@extend %block;
-		max-width: 1200px;
-		width: 100%;
-	}
-	&--fixed-center{
-		@extend %block;
-		margin: auto;
-	}
-	&--full{
-		@extend %block;
-		width: 100%;
-	}
-}
-
-
-.sidebar{
-
-}
-
-.footer{
-
-}
-
-
-
-
+@import './layout/_footer.scss';

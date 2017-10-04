@@ -17,6 +17,10 @@ gulp.task('webpack', function(){
 			.pipe(browserSync.stream());
 });
 
+gulp.task('webpack:watch', function(){
+	return gulp.watch(`${assets}js/**/*.js`, ['webpack']);
+});
+
 gulp.task('sass:core', function(){
 	return gulp.src(`${assets}css/app/core/core.scss`)
 			.pipe(gulpSass())
@@ -27,7 +31,6 @@ gulp.task('sass:core', function(){
 
 gulp.task('sass:watch', ['sass:core'], function(){
 	gulp.watch(`${assets}css/app/**/*.scss`, ['sass:core']);
-	gulp.watch(`${dist}css/*.css`).on('change', browserSync.reload);
 })
 
 gulp.task('server:watch', function(){
@@ -39,10 +42,6 @@ gulp.task('serve', ['webpack'], function(){
 	browserSync.init({
         proxy: `${settings.proxy.url}`,
     });
-	
-	gulp.watch(`${assets}js/**/*.js`, ['webpack']);
-	gulp.watch(`${dist}js/app.bundle.js`).on('change', browserSync.reload);
-	gulp.watch(`${dist}js/vendors.bundle.js`).on('change', browserSync.reload);
 });
-gulp.task('default', [ 'serve', 'sass:watch', 'server:watch']);
+gulp.task('default', [ 'serve', 'sass:watch', 'server:watch', 'webpack:watch']);
 

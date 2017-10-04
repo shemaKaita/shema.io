@@ -3,13 +3,13 @@
 }
 
 .listing-card{
-	@extend .section--width-5, .section--right;
+	@extend .section--width-1-5;
 	text-align: center;
 	&__inner{
-		@extend .wrapper, .wrapper--padding-15, .wrapper--margin-10;
-		background: #2eec71;
-		border-radius: 4px;
-		box-shadow: 4px 7px 31px 5px rgba(45, 239, 113, 0.6);
-		color: #fff;
+		@extend .wrapper--padding-15, .wrapper--margin-10;
+		background: #fff;
+		border-radius: 2px;
+		box-shadow: 4px 7px 45px 1px rgba(0, 0, 0, 0.15);
+		color: #555;
 	}
 }

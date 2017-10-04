@@ -6,15 +6,17 @@ webpackJsonp([0],[
 "use strict";
 
 
-var _jquery = __webpack_require__(0);
+var jQuery = __webpack_require__(0);
 
-var _jquery2 = _interopRequireDefault(_jquery);
+window.$ = jQuery, window.jQuery = jQuery;
 
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+$(document).ready(function ($) {
+	var _console;
 
-window.$ = _jquery2.default, window.jQuery = _jquery2.default;
+	var blah = [0, 1, 2, 3, 4];
 
-(0, _jquery2.default)(document).ready(function ($) {});
+	(_console = console).log.apply(_console, blah.concat([5, 6, 7]));
+});
 
 /***/ })
 ],[1]);
