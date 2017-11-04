@@ -1,8 +1,10 @@
-const jQuery = require('jquery');
+import Second from './second.js';
+import First from './first.js';
 
+const jQuery = require('jquery');
+const three = require('three');
 window.$ = jQuery,
 window.jQuery = jQuery;
 
-$(document).ready(($) => {
-	
-});
+new Second;
+new First;

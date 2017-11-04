@@ -1,3 +1,4 @@
 module.exports = [
-	'jquery'
+	'jquery',
+	'three'
 ];
